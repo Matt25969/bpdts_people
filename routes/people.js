@@ -19,11 +19,12 @@ const requestTwo = axios.get(cityEndPoint);
 let result = [];
 
 axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+	
 	responses[0].data.forEach(function (item, index) {
 		  if (item.latitude >= 50 && item.latitude <= 52 && item.longitude >= -1 && item.longitude <= 1) {
 		  	result.push(item);
 		  }
-	  })
+	})
 
 	responses[1].data.forEach(function (item, index) {
                 result.push(item);

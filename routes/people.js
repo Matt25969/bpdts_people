@@ -8,13 +8,13 @@ const axios = require('axios');
 
 router.get("/peopleInLondon", (req, res) => {
 
-let coord = "https://bpdts-test-app-v3.herokuapp.com/users"; 
+let coordEndPoint = "https://bpdts-test-app-v4.herokuapp.com/users"; 
 
-let city = "https://bpdts-test-app-v3.herokuapp.com/city/London/users";
+let cityEndPoint = "https://bpdts-test-app-v4.herokuapp.com/city/London/users";
 
-const requestOne = axios.get(coord);
+const requestOne = axios.get(coordEndPoint);
 
-const requestTwo = axios.get(city);	
+const requestTwo = axios.get(cityEndPoint);	
 
 let result = [];
 

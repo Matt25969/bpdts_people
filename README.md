@@ -2,7 +2,7 @@
 
 ## Instructions
 
-To deploy the application first ensure that you have Docker installed, you can find instructions for a basic Ubuntu distro here:
+To deploy the application locally first ensure that you have Docker installed, you can find instructions for a basic Ubuntu distro here:
 https://docs.docker.com/engine/install/ubuntu/
 
 You then need to run the following commands to start the Docker container:

@@ -17,7 +17,7 @@ curl 127.0.0.1:5000/people/peopleInLondon
 ```
 ## Thoughts on remote deployment
 
-To most effecitvely deploy this application an orchestration tool would be used such as Docker-Swarm or Kubernetes.  An Orchestration tool would make use of a cluster of machines (nodes) that would ensure that the application remains highly available, scalable and protected:
+To most effecitvely deploy this application an orchestration tool would be used such as Docker-Swarm or Kubernetes.  An Orchestration tool would make use of a cluster of machines (nodes) that would ensure that the application remains highly available, scalable and protected.  Further improvements to remote delivery would be to make use of a managed cluster provided by one of the Cloud Providers, for example EKS, however some benefits of using an orchestration tool are as follows:
 
 ### Highly available
 
@@ -31,8 +31,8 @@ The cluster is able to react to changes in traffic by scaling both up and down, 
 
 All nodes that are part of the Cluster will be behind a load-balancer and not directly accessible from the internet, assisigning a security certificate to the Load Balancer will enable communication via HTTPS to the Load Balancer.  Working with an orchestration tool also makes deploying security patches to your application easier by facilitating rolling updates.
 
+
 ## Assumptions
 
 - The result of the API call is an array of relevant people, this array could be further iterated over and manipulated
 - 60 miles within a radius on London is assumed to be between 50 - 52 Latitude and -1 - 1 Longitude
-- 
